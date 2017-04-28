@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: edu.bitsgoa.equivalencechecker;singleton:=true
+Bundle-Version: 1.1.0
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jface.text,
+ org.eclipse.core.resources;bundle-version="3.10.1"
+  
+Export-Package: edu.bitsgoa.equivalencechecker.views
+Bundle-ClassPath: .,
+ lib/org.eclipse.ui.console_3.6.100.v20150822-1912.jar

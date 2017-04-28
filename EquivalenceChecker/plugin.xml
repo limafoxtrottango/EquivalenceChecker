@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+ 
+ 	<extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Equivalence check"
+               mnemonic="P"
+               id="edu.bitsgoa.equivalencechecker.menus.sampleMenu">
+            <command
+                  commandId="edu.bitsgoa.equivalencechecker.commands.sampleCommand"
+                  label="Perform Equivalence Check"
+                  mnemonic="S"
+                  id="edu.bitsgoa.equivalencechecker.menus.sampleCommand">
+            </command>
+         </menu>
+      </menuContribution>
+       <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="edu.bitsgoa.equivalencechecker.toolbars.sampleToolbar">
+            <command
+                  commandId="edu.bitsgoa.equivalencechecker.commands.sampleCommand"
+                  icon="icons/final_icon.gif"
+                  tooltip="Perform Equivalence Check"
+                  id="edu.bitsgoa.equivalencechecker.toolbars.sampleCommand">
+            </command>
+            
+         </toolbar>
+      </menuContribution>
+       </extension>
+       
+       <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="edu.bitsgoa.equivalencechecker.commands.sampleCommand"
+            class="edu.bitsgoa.equivalencechecker.handlers.Handler">
+      </handler>
+      
+   </extension>
+	 <extension
+         point="org.eclipse.ui.commands">
+         <category
+            name="Sample Category"
+            id="edu.bitsgoa.equivalencechecker.commands.category">
+      </category>
+      <command
+            name="Perform Equivalence Check"
+            id="edu.bitsgoa.equivalencechecker.commands.sampleCommand">
+      </command>
+   </extension>
+   
+ <extension point="org.eclipse.ui.startup">
+   		<startup class="edu.bitsgoa.equivalencechecker.startup.Startup"/>
+	</extension>
+	
+	<extension
+         point="org.eclipse.ui.views">
+      <view
+            class="edu.bitsgoa.equivalencechecker.views.ConsoleView"
+            id="edu.bitsgoa.equivalencechecker.views.ConsoleView"
+            name="Equivalence Checker Results">
+      </view>
+   </extension>
+	 
+</plugin>
